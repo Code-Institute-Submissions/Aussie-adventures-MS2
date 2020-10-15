@@ -327,3 +327,19 @@ footer {
     cursor: pointer;
     color: #f8f8ff;
 }
+
+#to-top-btn {
+    width: 6rem;
+    height: 6rem;
+    background-color: #102420;
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 99;
+    color: #016d9c;
+    border: none;
+    font-size: 30px;
+    padding: 5px 5px;
+}

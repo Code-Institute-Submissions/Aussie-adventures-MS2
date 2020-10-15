@@ -1,6 +1,8 @@
+// Navigation-hamburger icon for smaller devices 
+
 var open = document.getElementById('hamburger');
 var changeIcon = true;
-
+// When the user clicks on the hamburger icon overlays the navigation elements on a coloured background.
 open.addEventListener("click", function() {
 
     var overlay = document.querySelector('.overlay');
