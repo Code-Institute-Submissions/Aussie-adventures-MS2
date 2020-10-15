@@ -22,17 +22,41 @@ body {
     overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Concert One", cursive;
+    letter-spacing: 3px;
+    color: #016d9c;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #7E7263;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.lead {
+    color: #606060;
+    font-size: 2rem;
+}
+
 
 /*-----------------------NAVBAR */
 
 a {
     text-decoration: none !important;
     color: rgba(240, 244, 247, 0.966) !important;
-}
-
-.lead {
-    color: #606060;
-    font-size: 2rem;
 }
 
 .hero-image-home {
