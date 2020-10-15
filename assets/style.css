@@ -278,3 +278,33 @@ footer {
     color: #97c1d9;
     transform: scale(1.4);
 }
+
+
+/*-------Learn about ireland----------------*/
+
+
+/* Card Styles */
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img-top {
+    padding-bottom: 10px;
+}
+
+.card-title {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    min-height: 40px;
+}
+
+.card-body p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
