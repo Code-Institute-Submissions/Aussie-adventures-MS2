@@ -200,3 +200,52 @@ nav ul li a:hover::after {
         opacity: 1;
     }
 }
+
+
+/* --- FOOTER --- */
+
+.footer-img {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: -28px;
+}
+
+footer {
+    height: 2.8rem;
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.footer-container {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+
+/*--- Social Media icons ---*/
+
+.social {
+    list-style: none;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+.social i {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 5px;
+    color: #f8f8ff;
+    transition: transform 0.2s;
+}
+
+.social i:hover {
+    color: #97c1d9;
+    transform: scale(1.4);
+}
