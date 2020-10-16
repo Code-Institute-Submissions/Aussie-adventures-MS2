@@ -384,3 +384,7 @@ footer {
     letter-spacing: 3px;
     text-shadow: 1px 1px 1px #000;
 }
+
+.img-thumbnail {
+    min-height: 320px;
+}
