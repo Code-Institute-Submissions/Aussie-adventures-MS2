@@ -1,4 +1,4 @@
-// Navigation-hamburger icon for smaller devices 
+//Navigation-hamburger icon for smaller devices 
 
 var open = document.getElementById('hamburger');
 var changeIcon = true;
@@ -44,3 +44,14 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Toggle FAQs
+
+const toggles = document.querySelectorAll('.faq-toggle');
+
+toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        toggle.parentNode.classList.toggle('active');
+    });
+});

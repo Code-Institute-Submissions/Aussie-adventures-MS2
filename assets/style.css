@@ -407,15 +407,16 @@ footer {
 /* FAQs */
 
 .faqs-container {
-    margin: 5px auto;
-    max-width: 1000px;
+    margin: 40px auto;
+    max-width: 1200px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
 }
 
 .faq {
     background-color: transparent;
     border: 1px solid #9FA4A8;
+    border-radius: 20px;
     padding: 30px;
     position: relative;
     overflow: hidden;

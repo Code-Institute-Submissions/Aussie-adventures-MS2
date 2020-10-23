@@ -1,4 +1,4 @@
-/*Toggle functions - Learn about Australia cards -Code inspired from Code Institute Course*/
+//Toggle functions - Learn about Australia cards -Code inspired from Code Institute Course
 
 $(document).ready(function() {
     $(".invisible").hide();
@@ -21,7 +21,7 @@ $(function() {
 });
 
 
-/*Gallery filter */
+//Gallery filter 
 
 $('.gallery-list-item').click(function() {
     let value = $(this).attr('data-filter');
