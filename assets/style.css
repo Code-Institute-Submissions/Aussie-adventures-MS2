@@ -402,3 +402,103 @@ footer {
 .filter {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+/* FAQs */
+
+.faqs-container {
+    margin: 5px auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9FA4A8;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.faq.active::after,
+.faq.active::before {
+    color: #7E7263;
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq-title {
+    margin: 0 35px 0 0;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 5px 5px;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #ffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.faq-toggle:focus {
+    outline: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9FA4A8;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+    color: #9FA4A8;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
