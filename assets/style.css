@@ -91,12 +91,6 @@ a {
     margin: 0 auto;
 }
 
-.container {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
 .menu-toggle {
     position: absolute;
     top: 2.5rem;
