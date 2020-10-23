@@ -38,11 +38,6 @@ h6 {
     text-shadow: 1px 1px 1px #7E7263;
 }
 
-img {
-    width: 100%;
-    max-width: 100%;
-}
-
 p {
     font-size: 1.6rem;
 }
@@ -87,7 +82,7 @@ a {
 
 .container {
     max-width: 120rem;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -389,4 +384,21 @@ footer {
 
 .img-thumbnail {
     min-height: 320px;
+}
+
+
+/* Gallery */
+
+.gallery-list-item {
+    color: #777;
+    cursor: pointer;
+    user-select: none;
+}
+
+.active-item {
+    color: #75B1D4;
+}
+
+.filter {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
