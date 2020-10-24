@@ -46,7 +46,7 @@ function topFunction() {
 }
 
 
-// Toggle FAQs
+//Toggle FAQs
 
 const toggles = document.querySelectorAll('.faq-toggle');
 
