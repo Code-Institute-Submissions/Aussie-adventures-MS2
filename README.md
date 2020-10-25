@@ -37,8 +37,11 @@ The website is made for helping travellers to plan their holidays using the map.
 #### Skeleton
 
  Balsamiq Wireframes was used to create all wireframes for the project.
- wireframes with some comments for both desktop and mobile devices can be found here.
+ wireframes with some comments for both desktop, tablet and mobile devices can be found below:
 
+ - Desktop version [Here](design/aussie-adventures-wireframes-desktop.png)
+ - Tablet version [Here](design/aussie-adventures-wireframes-tablet.png)
+ - Mobile version [Here](design/aussie-adventures-wireframes-mobile.png)
 
 
 As a starting point I used the image chosen for my landing page which helped to choose the color pallete for the entire website.
