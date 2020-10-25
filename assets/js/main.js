@@ -63,12 +63,12 @@ sr.reveal('.animate-bottom', {
     origin: 'bottom',
     duration: 1000,
     distance: '64px',
-    delay: '400'
+    delay: '600'
 });
 
 sr.reveal('.animate-top', {
     origin: 'top',
     duration: 1000,
     distance: '320px',
-    delay: '600'
+    delay: '900'
 });

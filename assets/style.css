@@ -520,3 +520,54 @@ footer {
 .faq.active .faq-toggle .fa-chevron-down {
     display: none;
 }
+
+
+/*Reasons tos visit Australia section-animations icons*/
+
+.moveFromLeft {
+    animation-name: moveFromLeft;
+    animation-duration: 3s;
+}
+
+.moveFromRight {
+    animation-name: moveFromRight;
+    animation-duration: 3s;
+}
+
+.moveFromBottom {
+    animation-name: moveFromBottom;
+    animation-duration: 3s;
+}
+
+@keyframes moveFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveFromBottom {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

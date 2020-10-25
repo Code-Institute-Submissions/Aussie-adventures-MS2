@@ -37,3 +37,23 @@ $('.gallery-list-item').click(function() {
     $(this).addClass('active-item').siblings().removeClass('active-item');
 
 });
+
+
+
+//Reasons to visit Australia Icons animations (trigger scroll )
+$(document).ready(function() {
+    $(window).scroll(function() {
+        let position = $(this).scrollTop();
+        if (position >= 450) {
+            $('.text-secondary').addClass("moveFromLeft");
+            $('.text-success').addClass("moveFromBottom");
+            $('.text-danger').addClass("moveFromRight");
+
+        } else {
+            $('.text-secondary').removeClass("moveFromLeft");
+            $('.text-success').removeClass("moveFromBottom");
+            $('.text-danger').removeClass("moveFromRight");
+
+        }
+    });
+});
