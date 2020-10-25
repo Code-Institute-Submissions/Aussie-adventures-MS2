@@ -55,3 +55,20 @@ toggles.forEach(toggle => {
         toggle.parentNode.classList.toggle('active');
     });
 });
+
+
+//Scroll reveal
+window.sr = ScrollReveal();
+sr.reveal('.animate-bottom', {
+    origin: 'bottom',
+    duration: 1000,
+    distance: '64px',
+    delay: '400'
+});
+
+sr.reveal('.animate-top', {
+    origin: 'top',
+    duration: 1000,
+    distance: '320px',
+    delay: '600'
+});
