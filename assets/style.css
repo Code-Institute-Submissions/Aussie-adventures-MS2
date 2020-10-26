@@ -66,7 +66,7 @@ p {
 }
 
 
-/*---NAVBAR */
+/* NAVBAR */
 
 a {
     text-decoration: none !important;
@@ -278,7 +278,7 @@ footer {
 }
 
 
-/*--- Social Media icons ---*/
+/*--- Social Media icons footer ---*/
 
 .social {
     list-style: none;
@@ -369,10 +369,10 @@ footer {
 }
 
 
-/* Activity cards */
+/* --- Map with activity(options) cards --- */
 
 
-/* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/*/
+/* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
 
 .grid {
     display: grid;
@@ -404,7 +404,20 @@ footer {
 }
 
 
-/* Gallery */
+/* Map styles */
+
+
+/*define the size of the div element that contains the map. */
+
+#map {
+    height: 700px;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+/* Gallery section*/
 
 .gallery-list-item {
     color: #777;
@@ -522,7 +535,7 @@ footer {
 }
 
 
-/*Reasons tos visit Australia section-animations icons*/
+/*Reasons to visit Australia section-animations icons*/
 
 .moveFromLeft {
     animation-name: moveFromLeft;
