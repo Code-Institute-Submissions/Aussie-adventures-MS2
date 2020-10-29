@@ -122,6 +122,35 @@
             <div id="map"></div>
         </section>
 
+        <!-- Taking Notes App -->
+        <section id="taking-notes-app">
+            <div class="open-notes-app">Open taking-notes App</div>
+            <div class="notes-app-container">
+                <div class="container p-3">
+                    <div class="col">
+                        <h2>My Holiday List</h2>
+                        <p>Add notes on this list</p>
+                        <div id="note-input-wrapper">
+                            <input type="text" id="note-input" class="form-control" placeholder="Write your note here...">
+                        </div>
+                        <button type=button id="submit-note" class="btn btn-primary" onclick="addToList()"> Add note <i class="fas fa-pencil-alt"></i></button>
+                    </div>
+                    <div class="row pt-5 pb-3">
+                        <div class="col">
+                            <!-- list here -->
+                            <h3 class="mb-4">Your Notes</h3>
+                            <ul id="notes-list"></ul>
+                        </div>
+                    </div>
+                    <div class="row pt-5 pb-3">
+                        <div class="col">
+                            <button type=button id="clear-list" class="btn btn-danger" onclick="clearList()"> Delete notes <i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
         <!--FOOTER-->
         <img class="footer-img" src="assets/images/sydneyfooter2.png" alt="Sidney skyline" />
