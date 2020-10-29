@@ -364,6 +364,41 @@ footer {
     color: #f8f8ff;
 }
 
+
+/* Button Delete within notes app */
+
+button.btn-delete {
+    background: none;
+    border-radius: 15px;
+    color: #F92C2C;
+    font-weight: 800;
+    margin-left: 10px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+button.btn-delete {
+    cursor: pointer;
+    background-color: #016d9c;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #F92C2C;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.btn-danger:hover {
+    background-color: #016d9c;
+    transform: translateY(-3px);
+}
+
 #to-top-btn {
     width: 6rem;
     height: 6rem;
