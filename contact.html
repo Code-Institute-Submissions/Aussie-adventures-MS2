@@ -26,6 +26,11 @@
     <!--ScrollReveal JS-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        emailjs.init('user_ZKQ2ROBVro8E78nM53oVj')
+    </script>
 
     <body>
         <!-- Scroll to top button -->
@@ -145,6 +150,7 @@
         </section>
 
         <!-- Contact section -->
+
         <section class="section-contact">
             <div class="container-contact animate-bottom">
                 <h3 class="title-contact">Let us do the hard work</h3>
@@ -160,28 +166,110 @@
                             <li><i class="fa fa-envelope text-info"></i> info@aussie.com</li>
                         </ul>
                     </div>
-                    <div class="contact">
-                        <form>
+                    <div>
+                        <form onsubmit="return sendMail(this);" id="contact">
                             <p>
                                 <label>Name</label>
-                                <input type="text" name="name">
+                                <input type="text" name="name" class="form-control" id="name" p required>
                             </p>
                             <p>
-                                <label>Email Address</label>
-                                <input type="email" name="email">
+                                <label>Email</label>
+                                <input type="email" name="email" class="form-control" id="email" required>
                             </p>
                             <p class="full">
                                 <label>Message</label>
-                                <textarea name="message" rows="5"></textarea>
+                                <input type="message" textarea name="message" name="message" class="form-control" id="message" required>
                             </p>
                             <p class="full">
-                                <button class="btn btn-secondary">Send message</button>
+                                <button type="submit" class="btn btn-secondary">Send message</button>
                             </p>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!--discorvery
+        <section>
+            <form onsubmit="return sendMail(this);" class="container" id="contactForm ">
+                <div class="row">
+                    <div class="md-form form-sm animate-bottom">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="md-form form-sm">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                            </div>
+
+                        </div>
+                        <div class="md-form form-sm">">
+                            <div class="col-12 mb-3">
+                                <input type="message" name="message" class="form-control" id="message" placeholder="Write your message or ask your question here... " required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-secondary">Send message</button>
+                    </div>
+                </div>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <form onsubmit="return sendMail(this);" class="container" id="contactForm ">
+                <div class="row">
+                    <div class="md-form form-sm animate-bottom">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="md-form form-sm">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                            </div>
+
+                        </div>
+                        <div class="md-form form-sm">">
+                            <div class="col-12 mb-3">
+                                <input type="message" name="message" class="form-control" id="message" placeholder="Write your message or ask your question here... " required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-secondary">Send message</button>
+                    </div>
+                </div>
+                </div>
+            </form>
+        </section>-->
+
+
+
+        <!-- Section: Contact Form Success Message-->
+        <section>
+            <div class="modal fade" id="successModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title success-modal-title">Success!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="success-text">Your message has been sent to the Aussie Adventures team.</p>
+                            <p class="success-text"> We will contact you within 24h!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="removeText()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
         <!--FOOTER-->
@@ -209,6 +297,7 @@
         </script>
         </script>
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/sendEmail.js"></script>
     </body>
 
 </html>
