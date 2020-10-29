@@ -50,6 +50,7 @@ $(document).ready(function() {
             $('.text-success').addClass("moveFromBottom");
             $('.text-danger').addClass("moveFromRight");
 
+
         } else {
             $('.text-secondary').removeClass("moveFromLeft");
             $('.text-success').removeClass("moveFromBottom");
