@@ -6,7 +6,6 @@ let list = document.getElementById("notes-list");
 
 // Simulates button click on enter
 
-
 userInput.addEventListener("keydown", function(event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
@@ -15,9 +14,9 @@ userInput.addEventListener("keydown", function(event) {
         submitButton.click();
     }
 });
-// Get stored list items if they exist on page load
 
 
+// Get stored list items if they are on page 
 
 let currentList = localStorage.getItem("listItem");
 if (currentList) {
@@ -31,7 +30,7 @@ if (currentList) {
 
 function addToList() {
     let newItemValue = document.getElementById("note-input").value;
-    //check for required field message
+    //check if the required field  message was filled out
     let requiredMsg = document.querySelector("#note-item-required");
 
     // if there is nothing in input field
@@ -46,7 +45,7 @@ function addToList() {
             reqWrapper.appendChild(requiredMsg);
         }
     } else {
-        //create li element
+        //creates li element for notes 
         let newItem = document.createElement("li");
         newItem.className = "note-item";
         let newItemContent = document.createTextNode(newItemValue);
@@ -54,13 +53,13 @@ function addToList() {
         let deleteBtn = document.createElement("button");
         deleteBtn.innerText = "X";
         deleteBtn.className = "btn-delete";
-        // Append text and elements inside li
+        // Appends text and elements inside li
         newItem.appendChild(newItemContent);
         newItem.appendChild(deleteBtn);
         list.appendChild(newItem);
 
 
-        //clear user input field and remove required message
+        //clears user input field and remove required message
         userInput.value = "";
         if (requiredMsg) {
             requiredMsg.remove();
@@ -71,7 +70,6 @@ function addToList() {
 }
 
 //Removes only an list item from list
-
 
 document.querySelector("body").addEventListener("click", function(event) {
     if (event.target.className === "btn-delete") {
