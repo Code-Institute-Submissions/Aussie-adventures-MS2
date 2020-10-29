@@ -669,6 +669,28 @@ footer {
     margin: 0;
 }
 
+
+/* MEDIA SIZE - large devices*/
+
+
+/*Contact section */
+
+@media(min-width: 700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .wrapper>* {
+        padding: 3em;
+    }
+    .contact-details ul {
+        text-align: left;
+        padding: 5px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
 .contact form .full {
     grid-column: 1 / 3;
 }
