@@ -50,6 +50,12 @@ p {
     font-size: 1.6rem;
 }
 
+.container {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 /*lead*/
 
@@ -95,12 +101,6 @@ a {
     background: url("images/kalbari.jpg") center no-repeat;
     background-size: cover;
     position: relative;
-}
-
-.container {
-    max-width: 120rem;
-    width: 100%;
-    margin: 0 auto;
 }
 
 .menu-toggle {
@@ -255,7 +255,7 @@ nav ul li a:hover::after {
 }
 
 
-/* --- FOOTER --- */
+/* FOOTER  */
 
 .footer-img {
     width: 100%;
@@ -271,20 +271,16 @@ footer {
 
 .footer-container {
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding-bottom: 10px;
 }
 
 
-/*--- Social Media icons footer ---*/
+/* Social Media icons footer */
 
 .social {
     list-style: none;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: center;
     width: 100%;
     margin: 0;
@@ -304,7 +300,7 @@ footer {
 }
 
 
-/*-------Learn about ireland----------------*/
+/* Learn about ireland */
 
 
 /* Card Styles */
@@ -347,6 +343,22 @@ footer {
     margin: 10px 10px;
 }
 
+.btn-secondary {
+    color: #fff;
+    background-color: #016d9c;
+    border-radius: 25px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 50px;
+    margin: 10px 10px;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #7E7263;
+    transform: translateY(-3px);
+}
+
 .find-out-more-btn:not(:disabled):not(.disabled) {
     cursor: pointer;
     color: #f8f8ff;
@@ -369,7 +381,7 @@ footer {
 }
 
 
-/* --- Map with activity(options) cards --- */
+/*  Map with activity(options) cards  */
 
 
 /* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
@@ -404,7 +416,7 @@ footer {
 }
 
 
-/* Map styles */
+/* Map style */
 
 
 /*define the size of the div element that contains the map. */
@@ -438,7 +450,7 @@ footer {
 
 .faqs-container {
     margin: 40px auto;
-    max-width: 1200px;
+    max-width: 1300px;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
 }
@@ -535,7 +547,7 @@ footer {
 }
 
 
-/*Reasons to visit Australia section-animations icons*/
+/* Reasons to visit Australia section - animations icons */
 
 .moveFromLeft {
     animation-name: moveFromLeft;
