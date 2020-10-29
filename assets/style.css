@@ -774,3 +774,18 @@ li.note-item {
     border-radius: 3px;
     margin-bottom: 10px;
 }
+
+
+/* Note required and response*/
+
+#note-item-required {
+    border: 1px solid;
+    padding: .3rem;
+    margin: 1rem 0;
+}
+
+#note-item-required {
+    color: #F92C2C;
+    border-color: #fff;
+    font-size: 15px;
+}
