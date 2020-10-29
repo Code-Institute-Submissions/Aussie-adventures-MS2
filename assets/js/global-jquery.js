@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 $(".open-notes-app").on("click", function() {
     $("#taking-notes-app").toggleClass("opened");
-    if ($(this).text() == "open-notes-app") {
+    if ($(this).text() == "Open taking-notes App") {
         $(this).text("Open taking-notes App");
     } else {
         $(this).text("Close taking-notes App");
