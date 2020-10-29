@@ -40,7 +40,8 @@ $('.gallery-list-item').click(function() {
 
 
 
-//Reasons to visit Australia Icons animations (trigger scroll )
+//Reasons to visit Australia Icons animations (trigger scroll)
+
 $(document).ready(function() {
     $(window).scroll(function() {
         let position = $(this).scrollTop();
