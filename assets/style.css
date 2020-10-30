@@ -61,7 +61,7 @@ p {
 
 .lead {
     color: #606060;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 
@@ -241,10 +241,10 @@ nav ul li a:hover::after {
     }
     nav ul li a {
         margin: 0;
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
     .brand {
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .overlay.menu-open,
     nav.menu-open {
@@ -1112,6 +1112,11 @@ nav ul li a:hover::after {
         transform: scale(1);
         opacity: 1;
     }
+    .hero-image-home,
+    .hero-image-activities,
+    .hero-image-contact {
+        height: 70vh;
+    }
 }
 
 
@@ -1759,5 +1764,36 @@ li.note-item {
     }
     .social li {
         margin: 0 20px;
+    }
+}
+
+
+/* Headings */
+
+@media screen and (max-width: 768px) {
+    /* Medium devices */
+    h2 {
+        font-size: 1.7rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+    }
+    /* Large devices */
+    @media screen and (min-width: 1200px) {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+/*  lead */
+
+@media (max-width: 576px) {
+    .lead {
+        font-size: 1.3rem;
     }
 }
