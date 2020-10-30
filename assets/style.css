@@ -65,9 +65,9 @@ p {
     font-weight: 600;
 }
 
-.about,
-.activities,
-.contact {
+.about-intro,
+.activities-intro,
+.contact-intro {
     background-color: #97c1d9;
 }
 
@@ -637,9 +637,11 @@ button.btn-delete {
 
 .container-contact {
     max-width: 1300px;
+    max-height: 70vh;
     margin-left: auto;
     margin-right: auto;
     padding: 0.5em;
+    margin-bottom: 30px;
 }
 
 .contact-details ul {
@@ -1794,6 +1796,12 @@ li.note-item {
 
 @media (max-width: 576px) {
     .lead {
+        font-size: 1.3rem;
+    }
+    .img-thumbnail {
+        min-height: 260px;
+    }
+    p {
         font-size: 1.3rem;
     }
 }
