@@ -448,6 +448,30 @@ button.btn-delete {
 
 .img-thumbnail {
     min-height: 320px;
+    width: auto;
+}
+
+.img-thumbnail:hover {
+    opacity: 1;
+    animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -684,7 +708,7 @@ button.btn-delete {
     color: #022d3f;
 }
 
-.contact {
+.contactForm {
     background: #F9FEFF;
 }
 
