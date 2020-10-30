@@ -1,1831 +1,1732 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@300;400;700;800&display=swap');
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    color: #404040;
-    font-size: 10px;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    color: #102420;
-    background-color: #fff;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Concert One", cursive;
-    letter-spacing: 2px;
-    color: #016d9c;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px #7E7263;
-}
-
-h4,
-h5,
-h6 {
-    font-family: "Concert One", cursive;
-    letter-spacing: 2px;
-    color: #016d9c;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-weight: 700;
-}
-
-p {
-    font-size: 1.6rem;
-}
-
-.container {
-    max-width: 120rem;
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/*lead*/
-
-.lead {
-    color: #606060;
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.about-intro,
-.activities-intro,
-.contact-intro {
-    background-color: #97c1d9;
-}
-
-
-/* NAVBAR */
-
-a {
-    text-decoration: none !important;
-    color: rgba(240, 244, 247, 0.966) !important;
-}
-
-.hero-image-home {
-    width: 100%;
-    height: 80vh;
-    background: url("images/goldcoastf.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-image-activities {
-    width: 100%;
-    height: 80vh;
-    background: url("images/luckybayf.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-image-contact {
-    width: 100%;
-    height: 80vh;
-    background: url("images/kalbari.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.menu-toggle {
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    color: #102420;
-    font-size: 4rem;
-    cursor: pointer;
-    z-index: 1000;
-    display: none;
-}
-
-nav {
-    padding-top: 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: "Concert one", cursive;
-}
-
-.brand {
-    font-size: 3rem;
-    font-family: "Concert one", cursive;
-    transform: translateX(-100rem);
-    animation: slideIn 0.5s forwards;
-}
-
-.brand span {
-    color: #016d9c;
-    font-family: "Concert one", cursive;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    list-style: none;
-    transform: translateX(100rem);
-    animation: slideIn 0.5s forwards;
-}
-
-nav ul li:nth-child(1) {
-    animation-delay: 0s;
-}
-
-nav ul li:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-nav ul li:nth-child(3) {
-    animation-delay: 1s;
-}
-
-nav ul li:nth-child(4) {
-    animation-delay: 1.5s;
-}
-
-nav ul li a {
-    padding: 1rem 0;
-    margin: 0 3rem;
-    position: relative;
-    letter-spacing: 3px;
-}
-
-nav ul li a:last-child {
-    margin-right: 0;
-}
-
-nav ul li a::before,
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #016d9c;
-    left: 0;
-    transform: scaleX(0);
-    transition: all 0.5s;
-}
-
-nav ul li a::before {
-    top: 0;
-    transform-origin: left;
-}
-
-nav ul li a::after {
-    bottom: 0;
-    transform-origin: right;
-}
-
-.overlay {
-    background-color: rgba(16, 36, 32, 0.85);
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    transition: opacity 650ms;
-    transform: scale(0);
-    opacity: 0;
-    display: none;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after {
-    transform: scaleX(1);
-}
-
-@keyframes slideIn {
-    from {}
-    to {
-        transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    nav {
-        padding-top: 0;
-        display: none;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 70vh;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin-top: 5rem;
-    }
-    nav ul li a {
-        margin: 0;
-        font-size: 2.3rem;
-    }
-    .brand {
-        font-size: 3rem;
-    }
-    .overlay.menu-open,
-    nav.menu-open {
-        display: flex;
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-
-/* FOOTER  */
-
-.footer-img {
-    width: 100%;
-    margin-top: 35px;
-    margin-bottom: -28px;
-}
-
-footer {
-    height: 2.8rem;
-    display: flex;
-    margin-bottom: -1px;
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-
-/* Social Media icons footer */
-
-.social {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-}
-
-.social i {
-    font-size: 1rem;
-    margin: 5px;
-    padding: 5px;
-    color: #f8f8ff;
-    transition: transform 0.2s;
-}
-
-.social i:hover {
-    color: #97c1d9;
-    transform: scale(1.4);
-}
-
-
-/* Learn about ireland */
-
-
-/* Card Styles */
-
-.card {
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-img-top {
-    padding-bottom: 10px;
-}
-
-.card-title {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    min-height: 40px;
-}
-
-.card-body p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-
-
-/* Buttons */
-
-.btn-primary {
-    color: #fff;
-    background-color: #7E7263;
-    border-radius: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #016d9c;
-    border-radius: 25px;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 10px 50px;
-    margin: 10px 10px;
-    width: 100%;
-}
-
-.btn-secondary:hover {
-    background-color: #7E7263;
-    transform: translateY(-3px);
-}
-
-.find-out-more-btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-    color: #f8f8ff;
-}
-
-
-/* Button Delete within notes app */
-
-button.btn-delete {
-    background: none;
-    border-radius: 15px;
-    color: #F92C2C;
-    font-weight: 800;
-    margin-left: 10px;
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
-
-button.btn-delete {
-    cursor: pointer;
-    background-color: #016d9c;
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #F92C2C;
-    border-radius: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-
-.btn-danger:hover {
-    background-color: #016d9c;
-    transform: translateY(-3px);
-}
-
-#to-top-btn {
-    width: 6rem;
-    height: 6rem;
-    background-color: #102420;
-    border-radius: 50%;
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    z-index: 99;
-    color: #016d9c;
-    border: none;
-    font-size: 30px;
-    padding: 5px 5px;
-}
-
-
-/*  Map with activity(options) cards  */
-
-
-/* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 2rem;
-}
-
-.activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #97c1d9;
-    background-size: cover;
-}
-
-.activity .centered {
-    position: absolute;
-    color: #fff;
-    font-size: 3.8rem;
-    font-family: "Concert One", cursive;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 1px 1px 1px #000;
-}
-
-.img-thumbnail {
-    min-height: 320px;
-    width: auto;
-}
-
-.img-thumbnail:hover {
-    opacity: 1;
-    animation: flash 1.5s;
-}
-
-@-webkit-keyframes flash {
-    0% {
-        opacity: .4;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes flash {
-    0% {
-        opacity: .4;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
-/* Map style */
-
-
-/*define the size of the div element that contains the map. */
-
-#map {
-    height: 700px;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-
-/* Gallery section*/
-
-.gallery-list-item {
-    color: #777;
-    cursor: pointer;
-    user-select: none;
-}
-
-.active-item {
-    color: #75B1D4;
-}
-
-.filter {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-/* FAQs */
-
-.faqs-container {
-    margin: 40px auto;
-    max-width: 1300px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
-}
-
-.faq {
-    background-color: transparent;
-    border: 1px solid #9FA4A8;
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    margin: 20px 0;
-    transition: 0.3s ease;
-}
-
-.faq.active {
-    background-color: #fff;
-    border-radius: 20px;
-}
-
-.faq.active::after,
-.faq.active::before {
-    color: #7E7263;
-    content: '\f075';
-    font-family: 'Font Awesome 5 Free';
-    font-size: 7rem;
-    position: absolute;
-    opacity: 0.2;
-    top: 20px;
-    left: 20px;
-    z-index: 0;
-}
-
-.faq.active::before {
-    color: #3498db;
-    top: -10px;
-    left: -30px;
-    transform: rotateY(180deg);
-}
-
-.faq-title {
-    margin: 0 35px 0 0;
-}
-
-.faq-text {
-    display: none;
-    margin: 30px 5px 5px;
-}
-
-.faq.active .faq-text {
-    display: block;
-}
-
-.faq-toggle {
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    color: #ffff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-}
-
-.faq-toggle:focus {
-    outline: none;
-}
-
-.faq.active .faq-toggle {
-    background-color: #9FA4A8;
-}
-
-.faq-toggle .fa-times {
-    display: none;
-}
-
-.faq.active .faq-toggle .fa-times {
-    display: block;
-}
-
-.faq-toggle .fa-chevron-down {
-    color: #9FA4A8;
-}
-
-.faq.active .faq-toggle .fa-chevron-down {
-    display: none;
-}
-
-
-/* Reasons to visit Australia section - animations icons */
-
-.moveFromLeft {
-    animation-name: moveFromLeft;
-    animation-duration: 3s;
-}
-
-.moveFromRight {
-    animation-name: moveFromRight;
-    animation-duration: 3s;
-}
-
-.moveFromBottom {
-    animation-name: moveFromBottom;
-    animation-duration: 3s;
-}
-
-@keyframes moveFromLeft {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveFromRight {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveFromBottom {
-    0% {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-/* CONTACT SECTION */
-
-.container-contact {
-    max-width: 1300px;
-    max-height: 70vh;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-    margin-bottom: 30px;
-}
-
-.contact-details ul {
-    list-style: none;
-    padding: 10px;
-    font-size: 15px;
-}
-
-.title-contact {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.wrapper {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
-}
-
-.wrapper>* {
-    padding: 1em;
-}
-
-.contact-details {
-    background: #C9E6FF;
-    background-image: url('images/aus-map.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #016d9c;
-    font-weight: bold;
-}
-
-.contact-details h3 {
-    text-align: left;
-    margin: 0 1ren 0;
-}
-
-.contact-details ul {
-    text-align: left;
-    margin: 0 1ren 0;
-    color: #022d3f;
-}
-
-.contactForm {
-    background: #F9FEFF;
-}
-
-
-/* CONTACT FORM */
-
-.contactForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.contactForm label {
-    display: block;
-}
-
-.contactForm p {
-    margin: 0;
-}
-
-.contactForm .full {
-    grid-column: 1 / 3;
-}
-
-.contactForm input,
-.contactForm textarea {
-    width: 100%;
-    padding: 1em;
-    border: 1px solid #C9E6FF;
-}
-
-
-/* MEDIA SIZE- large devices CONTACT SECTION */
-
-@media(min-width: 700px) {
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-    .wrapper>* {
-        padding: 3em;
-    }
-    .contact-details ul {
-        text-align: left;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-}
-
-
-/* ----- Taking Notes App ------- */
-
-#taking-notes-app,
-.notes-app-container {
-    top: 20vh;
-    right: -75vw;
-    z-index: 9999;
-    width: 100%;
-    position: fixed;
-    transition: all 0.2s ease-in-out;
-}
-
-
-/* Open the taking-notes-app  */
-
-.open-notes-app {
-    position: relative;
-    background: #016d9c;
-    border: 1px solid #016d9c;
-    border-radius: 6px 0 0 6px;
-    box-shadow: -3px 0px 3px 1px rgba(4, 85, 95, 0.4);
-    color: #ffff;
-    cursor: pointer;
-    font-size: 1.3rem;
-    padding: .6rem;
-    width: 21%;
-    top: 15vh;
-    text-align: center;
-}
-
-.open-notes-app::before {
-    position: absolute;
-    display: block;
-    content: " ";
-    box-shadow: -7px 0px 3px 0px rgba(4, 85, 95, 0.4);
-    background: #016d9c;
-    border: 1px solid #016d9c;
-    border-right-color: #016d9c;
-    width: 15px;
-    height: 15px;
-    left: 0;
-    top: 50%;
-    transform: translate(-100%, -50%);
-}
-
-.notes-app-container {
-    background: #97c1d9;
-    border: 1px solid #016d9c;
-    border-radius: 6px 0 0 6px;
-    box-shadow: -3px 0px 3px 1px rgba(0, 0, 0, 0.5);
-    width: 80%;
-    max-height: 80vh;
-    overflow: scroll;
-}
-
-
-/*  Notes app opened */
-
-#taking-notes-app.opened {
-    right: 0;
-}
-
-#taking-notes-app.opened .notes-app-container {
-    right: 0;
-}
-
-li.note-item {
-    background: #ffff;
-    color: #102420;
-    border: 1px solid #102420;
-    padding: 10px 25px 5px 10px;
-    position: relative;
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-
-/* Note required*/
-
-#note-item-required {
-    border: 1px solid;
-    padding: .4rem;
-    margin: 1rem 0;
-    color: #F92C2C;
-    border-color: #fff;
-    font-size: 15px;
-}
-
-
-/* MEDIA SIZES - Taking notes app */
-
-@media screen and (min-width: 576px) {
-    /*Notes-app  pop-out */
-    .open-notes-app {
-        left: -20%;
-    }
-    #notes-app,
-    .notes-app-container {
-        width: 100%;
-        right: -57vw;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /* Notes-app pop-out */
-    #taking-notes-app,
-    .notes-app-container {
-        width: 40%;
-        right: -38vw;
-    }
-    .open-notes-app {
-        top: 15vh;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    /* Notes-app  pop-out */
-    #taking-notes-app,
-    .notes-app-container {
-        width: 30%;
-        right: -28vw;
-    }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@300;400;700;800&display=swap');
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    color: #404040;
-    font-size: 10px;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    color: #102420;
-    background-color: #fff;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Concert One", cursive;
-    letter-spacing: 2px;
-    color: #016d9c;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px #7E7263;
-}
-
-h4,
-h5,
-h6 {
-    font-family: "Concert One", cursive;
-    letter-spacing: 2px;
-    color: #016d9c;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-weight: 700;
-}
-
-p {
-    font-size: 1.6rem;
-}
-
-.container {
-    max-width: 120rem;
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/*lead*/
-
-.lead {
-    color: #606060;
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.about,
-.activities,
-.contact {
-    background-color: #97c1d9;
-}
-
-
-/* NAVBAR */
-
-a {
-    text-decoration: none !important;
-    color: rgba(240, 244, 247, 0.966) !important;
-}
-
-.hero-image-home {
-    width: 100%;
-    height: 80vh;
-    background: url("images/goldcoastf.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-image-activities {
-    width: 100%;
-    height: 80vh;
-    background: url("images/luckybayf.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-image-contact {
-    width: 100%;
-    height: 80vh;
-    background: url("images/kalbari.jpg") center no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.menu-toggle {
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    color: #102420;
-    font-size: 4rem;
-    cursor: pointer;
-    z-index: 1000;
-    display: none;
-}
-
-nav {
-    padding-top: 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: "Concert one", cursive;
-}
-
-.brand {
-    font-size: 3rem;
-    font-family: "Concert one", cursive;
-    transform: translateX(-100rem);
-    animation: slideIn 0.5s forwards;
-}
-
-.brand span {
-    color: #016d9c;
-    font-family: "Concert one", cursive;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    list-style: none;
-    transform: translateX(100rem);
-    animation: slideIn 0.5s forwards;
-}
-
-nav ul li:nth-child(1) {
-    animation-delay: 0s;
-}
-
-nav ul li:nth-child(2) {
-    animation-delay: 0.5s;
-}
-
-nav ul li:nth-child(3) {
-    animation-delay: 1s;
-}
-
-nav ul li:nth-child(4) {
-    animation-delay: 1.5s;
-}
-
-nav ul li a {
-    padding: 1rem 0;
-    margin: 0 3rem;
-    position: relative;
-    letter-spacing: 3px;
-}
-
-nav ul li a:last-child {
-    margin-right: 0;
-}
-
-nav ul li a::before,
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #016d9c;
-    left: 0;
-    transform: scaleX(0);
-    transition: all 0.5s;
-}
-
-nav ul li a::before {
-    top: 0;
-    transform-origin: left;
-}
-
-nav ul li a::after {
-    bottom: 0;
-    transform-origin: right;
-}
-
-.overlay {
-    background-color: rgba(16, 36, 32, 0.85);
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    transition: opacity 650ms;
-    transform: scale(0);
-    opacity: 0;
-    display: none;
-}
-
-nav ul li a:hover::before,
-nav ul li a:hover::after {
-    transform: scaleX(1);
-}
-
-@keyframes slideIn {
-    from {}
-    to {
-        transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    nav {
-        padding-top: 0;
-        display: none;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 70vh;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-    }
-    nav ul li {
-        margin-top: 5rem;
-    }
-    nav ul li a {
-        margin: 0;
-        font-size: 2rem;
-    }
-    .brand {
-        font-size: 4rem;
-    }
-    .overlay.menu-open,
-    nav.menu-open {
-        display: flex;
-        transform: scale(1);
-        opacity: 1;
-    }
-    .hero-image-home,
-    .hero-image-activities,
-    .hero-image-contact {
-        height: 70vh;
-    }
-}
-
-
-/* FOOTER  */
-
-.footer-img {
-    width: 100%;
-    margin-top: 35px;
-    margin-bottom: -28px;
-}
-
-footer {
-    height: 2.8rem;
-    display: flex;
-    margin-bottom: -1px;
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-
-/* Social Media icons footer */
-
-.social {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-}
-
-.social i {
-    font-size: 1rem;
-    margin: 5px;
-    padding: 5px;
-    color: #f8f8ff;
-    transition: transform 0.2s;
-}
-
-.social i:hover {
-    color: #97c1d9;
-    transform: scale(1.4);
-}
-
-
-/* Learn about ireland */
-
-
-/* Card Styles */
-
-.card {
-    border: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-img-top {
-    padding-bottom: 10px;
-}
-
-.card-title {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 20px;
-    min-height: 40px;
-}
-
-.card-body p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
-}
-
-
-/* Buttons */
-
-.btn-primary {
-    color: #fff;
-    background-color: #7E7263;
-    border-radius: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #016d9c;
-    border-radius: 25px;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 10px 50px;
-    margin: 10px 10px;
-    width: 100%;
-}
-
-.btn-secondary:hover {
-    background-color: #7E7263;
-    transform: translateY(-3px);
-}
-
-.find-out-more-btn:not(:disabled):not(.disabled) {
-    cursor: pointer;
-    color: #f8f8ff;
-}
-
-
-/* Button Delete within notes app */
-
-button.btn-delete {
-    background: none;
-    border-radius: 15px;
-    color: #F92C2C;
-    font-weight: 800;
-    margin-left: 10px;
-    position: absolute;
-    right: 0;
-    top: 5px;
-}
-
-button.btn-delete {
-    cursor: pointer;
-    background-color: #016d9c;
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #F92C2C;
-    border-radius: 20px;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 10px;
-    margin: 10px 10px;
-}
-
-.btn-danger:hover {
-    background-color: #016d9c;
-    transform: translateY(-3px);
-}
-
-#to-top-btn {
-    width: 6rem;
-    height: 6rem;
-    background-color: #102420;
-    border-radius: 50%;
-    display: none;
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    z-index: 99;
-    color: #016d9c;
-    border: none;
-    font-size: 30px;
-    padding: 5px 5px;
-}
-
-
-/*  Map with activity(options) cards  */
-
-
-/* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 2rem;
-}
-
-.activity {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #97c1d9;
-    background-size: cover;
-}
-
-.activity .centered {
-    position: absolute;
-    color: #fff;
-    font-size: 3.8rem;
-    font-family: "Concert One", cursive;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 1px 1px 1px #000;
-}
-
-.img-thumbnail {
-    min-height: 320px;
-}
-
-
-/* Map style */
-
-
-/*define the size of the div element that contains the map. */
-
-#map {
-    height: 700px;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-
-/* Gallery section*/
-
-.gallery-list-item {
-    color: #777;
-    cursor: pointer;
-    user-select: none;
-}
-
-.active-item {
-    color: #75B1D4;
-}
-
-.filter {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-
-/* FAQs */
-
-.faqs-container {
-    margin: 40px auto;
-    max-width: 1300px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
-}
-
-.faq {
-    background-color: transparent;
-    border: 1px solid #9FA4A8;
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    margin: 20px 0;
-    transition: 0.3s ease;
-}
-
-.faq.active {
-    background-color: #fff;
-    border-radius: 20px;
-}
-
-.faq.active::after,
-.faq.active::before {
-    color: #7E7263;
-    content: '\f075';
-    font-family: 'Font Awesome 5 Free';
-    font-size: 7rem;
-    position: absolute;
-    opacity: 0.2;
-    top: 20px;
-    left: 20px;
-    z-index: 0;
-}
-
-.faq.active::before {
-    color: #3498db;
-    top: -10px;
-    left: -30px;
-    transform: rotateY(180deg);
-}
-
-.faq-title {
-    margin: 0 35px 0 0;
-}
-
-.faq-text {
-    display: none;
-    margin: 30px 5px 5px;
-}
-
-.faq.active .faq-text {
-    display: block;
-}
-
-.faq-toggle {
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    color: #ffff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    padding: 0;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    height: 30px;
-    width: 30px;
-}
-
-.faq-toggle:focus {
-    outline: none;
-}
-
-.faq.active .faq-toggle {
-    background-color: #9FA4A8;
-}
-
-.faq-toggle .fa-times {
-    display: none;
-}
-
-.faq.active .faq-toggle .fa-times {
-    display: block;
-}
-
-.faq-toggle .fa-chevron-down {
-    color: #9FA4A8;
-}
-
-.faq.active .faq-toggle .fa-chevron-down {
-    display: none;
-}
-
-
-/* Reasons to visit Australia section - animations icons */
-
-.moveFromLeft {
-    animation-name: moveFromLeft;
-    animation-duration: 3s;
-}
-
-.moveFromRight {
-    animation-name: moveFromRight;
-    animation-duration: 3s;
-}
-
-.moveFromBottom {
-    animation-name: moveFromBottom;
-    animation-duration: 3s;
-}
-
-@keyframes moveFromLeft {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveFromRight {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes moveFromBottom {
-    0% {
-        transform: translateY(40px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-/* CONTACT SECTION */
-
-.container-contact {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em;
-}
-
-.contact-details ul {
-    list-style: none;
-    padding: 10px;
-    font-size: 15px;
-}
-
-.title-contact {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.wrapper {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
-}
-
-.wrapper>* {
-    padding: 1em;
-}
-
-.contact-details {
-    background: #C9E6FF;
-    background-image: url('images/aus-map.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #016d9c;
-    font-weight: bold;
-}
-
-.contact-details h3 {
-    text-align: left;
-    margin: 0 1ren 0;
-}
-
-.contact-details ul {
-    text-align: left;
-    margin: 0 1ren 0;
-    color: #022d3f;
-}
-
-.contact {
-    background: #F9FEFF;
-}
-
-
-/* CONTACT FORM */
-
-.contactForm {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-}
-
-.contactForm label {
-    display: block;
-}
-
-.contactForm p {
-    margin: 0;
-}
-
-.contactForm .full {
-    grid-column: 1 / 3;
-}
-
-.contactForm input,
-.contactForm textarea {
-    width: 100%;
-    padding: 1em;
-    border: 1px solid #C9E6FF;
-}
-
-
-/* MEDIA SIZE- large devices CONTACT SECTION */
-
-@media(min-width: 700px) {
-    .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-    .wrapper>* {
-        padding: 3em;
-    }
-    .contact-details ul {
-        text-align: left;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-}
-
-
-/* ----- Taking Notes App ------- */
-
-#taking-notes-app,
-.notes-app-container {
-    top: 20vh;
-    right: -75vw;
-    z-index: 9999;
-    width: 100%;
-    position: fixed;
-    transition: all 0.2s ease-in-out;
-}
-
-
-/* Open the taking-notes-app  */
-
-.open-notes-app {
-    position: relative;
-    background: #016d9c;
-    border: 1px solid #016d9c;
-    border-radius: 6px 0 0 6px;
-    box-shadow: -3px 0px 3px 1px rgba(4, 85, 95, 0.4);
-    color: #ffff;
-    cursor: pointer;
-    font-size: 1.3rem;
-    padding: .6rem;
-    width: 21%;
-    top: 15vh;
-    text-align: center;
-}
-
-.open-notes-app::before {
-    position: absolute;
-    display: block;
-    content: " ";
-    box-shadow: -7px 0px 3px 0px rgba(4, 85, 95, 0.4);
-    background: #016d9c;
-    border: 1px solid #016d9c;
-    border-right-color: #016d9c;
-    width: 15px;
-    height: 15px;
-    left: 0;
-    top: 50%;
-    transform: translate(-100%, -50%);
-}
-
-.notes-app-container {
-    background: #97c1d9;
-    border: 1px solid #016d9c;
-    border-radius: 6px 0 0 6px;
-    box-shadow: -3px 0px 3px 1px rgba(0, 0, 0, 0.5);
-    width: 80%;
-    max-height: 80vh;
-    overflow: scroll;
-}
-
-
-/*  Notes app opened */
-
-#taking-notes-app.opened {
-    right: 0;
-}
-
-#taking-notes-app.opened .notes-app-container {
-    right: 0;
-}
-
-li.note-item {
-    background: #ffff;
-    color: #102420;
-    border: 1px solid #102420;
-    padding: 10px 25px 5px 10px;
-    position: relative;
-    border-radius: 3px;
-    margin-bottom: 10px;
-}
-
-
-/* Note required*/
-
-#note-item-required {
-    border: 1px solid;
-    padding: .4rem;
-    margin: 1rem 0;
-    color: #F92C2C;
-    border-color: #fff;
-    font-size: 15px;
-}
-
-
-/* MEDIA SIZES - Taking notes app */
-
-@media screen and (min-width: 576px) {
-    /*Notes-app  pop-out */
-    .open-notes-app {
-        left: -20%;
-    }
-    #notes-app,
-    .notes-app-container {
-        width: 100%;
-        right: -57vw;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    /* Notes-app pop-out */
-    #taking-notes-app,
-    .notes-app-container {
-        width: 40%;
-        right: -38vw;
-    }
-    .open-notes-app {
-        top: 15vh;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    /* Notes-app  pop-out */
-    #taking-notes-app,
-    .notes-app-container {
-        width: 30%;
-        right: -28vw;
-    }
-}
-
-
-/* Media queries  - Footer */
-
-@media only screen and (min-width: 768px) {
-    footer {
-        height: 3.2rem;
-    }
-    .footer-img {
-        margin-bottom: -35px;
-    }
-    .social li {
-        margin: 0px 10px;
-        margin-bottom: 3px;
-    }
-    .social i {
-        font-size: 1.6rem;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    form {
-        padding: 40px 120px;
-    }
-    .social i {
-        font-size: 1.9rem;
-    }
-    .footer-container {
-        padding-bottom: 1.3rem;
-    }
-    .footer-img {
-        margin-top: -10px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .footer-img {
-        margin-top: -35px;
-        margin-bottom: -50px;
-    }
-    .social li {
-        margin: 0 20px;
-    }
-}
-
-
-/* Headings */
-
-@media screen and (max-width: 768px) {
-    /* Medium devices */
-    h2 {
-        font-size: 1.7rem;
-    }
-    h3 {
-        font-size: 1.6rem;
-    }
-    h4 {
-        font-size: 1.4rem;
-    }
-    /* Large devices */
-    @media screen and (min-width: 1200px) {
-        h2 {
-            font-size: 3rem;
-        }
-    }
-}
-
-
-/*  lead */
-
-@media (max-width: 576px) {
-    .lead {
-        font-size: 1.3rem;
-    }
-    .img-thumbnail {
-        min-height: 260px;
-    }
-    p {
-        font-size: 1.3rem;
-    }
-}
+                @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@300;400;700;800&display=swap');
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+                color: #404040;
+                font-size: 10px;
+            }
+            
+            body {
+                font-family: "Montserrat", sans-serif;
+                color: #102420;
+                background-color: #fff;
+                font-weight: 400;
+                line-height: 1.5;
+                text-align: left;
+                overflow-x: hidden;
+            }
+            
+            h1,
+            h2,
+            h3 {
+                font-family: "Concert One", cursive;
+                letter-spacing: 2px;
+                color: #016d9c;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-weight: 700;
+                text-shadow: 1px 1px 1px #7E7263;
+            }
+            
+            h4,
+            h5,
+            h6 {
+                font-family: "Concert One", cursive;
+                letter-spacing: 2px;
+                color: #016d9c;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-weight: 700;
+            }
+            
+            p {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                max-width: 120rem;
+                width: 100%;
+                margin: 0 auto;
+            }
+            /*lead*/
+            
+            .lead {
+                color: #606060;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            
+            .about-intro,
+            .activities-intro,
+            .contact-intro {
+                background-color: #97c1d9;
+            }
+            /* NAVBAR */
+            
+            a {
+                text-decoration: none !important;
+                color: rgba(240, 244, 247, 0.966) !important;
+            }
+            
+            .hero-image-home {
+                width: 100%;
+                height: 80vh;
+                background: url("images/goldcoastf.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .hero-image-activities {
+                width: 100%;
+                height: 80vh;
+                background: url("images/luckybayf.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .hero-image-contact {
+                width: 100%;
+                height: 80vh;
+                background: url("images/kalbari.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .menu-toggle {
+                position: absolute;
+                top: 2.5rem;
+                right: 2.5rem;
+                color: #102420;
+                font-size: 4rem;
+                cursor: pointer;
+                z-index: 1000;
+                display: none;
+            }
+            
+            nav {
+                padding-top: 3.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-family: "Concert one", cursive;
+            }
+            
+            .brand {
+                font-size: 3rem;
+                font-family: "Concert one", cursive;
+                transform: translateX(-100rem);
+                animation: slideIn 0.5s forwards;
+            }
+            
+            .brand span {
+                color: #016d9c;
+                font-family: "Concert one", cursive;
+            }
+            
+            nav ul {
+                display: flex;
+            }
+            
+            nav ul li {
+                list-style: none;
+                transform: translateX(100rem);
+                animation: slideIn 0.5s forwards;
+            }
+            
+            nav ul li:nth-child(1) {
+                animation-delay: 0s;
+            }
+            
+            nav ul li:nth-child(2) {
+                animation-delay: 0.5s;
+            }
+            
+            nav ul li:nth-child(3) {
+                animation-delay: 1s;
+            }
+            
+            nav ul li:nth-child(4) {
+                animation-delay: 1.5s;
+            }
+            
+            nav ul li a {
+                padding: 1rem 0;
+                margin: 0 3rem;
+                position: relative;
+                letter-spacing: 3px;
+            }
+            
+            nav ul li a:last-child {
+                margin-right: 0;
+            }
+            
+            nav ul li a::before,
+            nav ul li a::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #016d9c;
+                left: 0;
+                transform: scaleX(0);
+                transition: all 0.5s;
+            }
+            
+            nav ul li a::before {
+                top: 0;
+                transform-origin: left;
+            }
+            
+            nav ul li a::after {
+                bottom: 0;
+                transform-origin: right;
+            }
+            
+            .overlay {
+                background-color: rgba(16, 36, 32, 0.85);
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                transition: opacity 650ms;
+                transform: scale(0);
+                opacity: 0;
+                display: none;
+            }
+            
+            nav ul li a:hover::before,
+            nav ul li a:hover::after {
+                transform: scaleX(1);
+            }
+            
+            @keyframes slideIn {
+                from {}
+                to {
+                    transform: translateX(0);
+                }
+            }
+            
+            @media screen and (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
+                nav {
+                    padding-top: 0;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    height: 70vh;
+                    text-align: center;
+                }
+                nav ul {
+                    flex-direction: column;
+                }
+                nav ul li {
+                    margin-top: 5rem;
+                }
+                nav ul li a {
+                    margin: 0;
+                    font-size: 2.3rem;
+                }
+                .brand {
+                    font-size: 3rem;
+                }
+                .overlay.menu-open,
+                nav.menu-open {
+                    display: flex;
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            /* FOOTER  */
+            
+            .footer-img {
+                width: 100%;
+                margin-top: 35px;
+                margin-bottom: -28px;
+            }
+            
+            footer {
+                height: 2.8rem;
+                display: flex;
+                margin-bottom: -1px;
+            }
+            
+            .footer-container {
+                display: flex;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+            /* Social Media icons footer */
+            
+            .social {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 0;
+            }
+            
+            .social i {
+                font-size: 1rem;
+                margin: 5px;
+                padding: 5px;
+                color: #f8f8ff;
+                transition: transform 0.2s;
+            }
+            
+            .social i:hover {
+                color: #97c1d9;
+                transform: scale(1.4);
+            }
+            /* Learn about ireland */
+            /* Card Styles */
+            
+            .card {
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .card-img-top {
+                padding-bottom: 10px;
+            }
+            
+            .card-title {
+                margin-top: 20px;
+                font-weight: 400;
+                font-size: 20px;
+                min-height: 40px;
+            }
+            
+            .card-body p {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 13px;
+            }
+            /* Buttons */
+            
+            .btn-primary {
+                color: #fff;
+                background-color: #7E7263;
+                border-radius: 20px;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px 10px;
+                margin: 10px 10px;
+            }
+            
+            .btn-secondary {
+                color: #fff;
+                background-color: #016d9c;
+                border-radius: 25px;
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 10px 50px;
+                margin: 10px 10px;
+                width: 100%;
+            }
+            
+            .btn-secondary:hover {
+                background-color: #7E7263;
+                transform: translateY(-3px);
+            }
+            
+            .find-out-more-btn:not(:disabled):not(.disabled) {
+                cursor: pointer;
+                color: #f8f8ff;
+            }
+            /* Button Delete within notes app */
+            
+            button.btn-delete {
+                background: none;
+                border-radius: 15px;
+                color: #F92C2C;
+                font-weight: 800;
+                margin-left: 10px;
+                position: absolute;
+                right: 0;
+                top: 5px;
+            }
+            
+            button.btn-delete {
+                cursor: pointer;
+                background-color: #016d9c;
+            }
+            
+            .btn-danger {
+                color: #fff;
+                background-color: #F92C2C;
+                border-radius: 20px;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px 10px;
+                margin: 10px 10px;
+            }
+            
+            .btn-danger:hover {
+                background-color: #016d9c;
+                transform: translateY(-3px);
+            }
+            
+            #to-top-btn {
+                width: 6rem;
+                height: 6rem;
+                background-color: #102420;
+                border-radius: 50%;
+                display: none;
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                z-index: 99;
+                color: #016d9c;
+                border: none;
+                font-size: 30px;
+                padding: 5px 5px;
+            }
+            /*  Map with activity(options) cards  */
+            /* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+            
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+                grid-gap: 2rem;
+            }
+            
+            .activity {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #97c1d9;
+                background-size: cover;
+            }
+            
+            .activity .centered {
+                position: absolute;
+                color: #fff;
+                font-size: 3.8rem;
+                font-family: "Concert One", cursive;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-shadow: 1px 1px 1px #000;
+            }
+            
+            .img-thumbnail {
+                min-height: 320px;
+                width: auto;
+            }
+            
+            .img-thumbnail:hover {
+                opacity: 1;
+                animation: flash 1.5s;
+            }
+            
+            @-webkit-keyframes flash {
+                0% {
+                    opacity: .4;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes flash {
+                0% {
+                    opacity: .4;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            /* Map style */
+            /*define the size of the div element that contains the map. */
+            
+            #map {
+                height: 700px;
+                width: 100%;
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+            }
+            /* Gallery section*/
+            
+            .gallery-list-item {
+                color: #777;
+                cursor: pointer;
+                user-select: none;
+            }
+            
+            .active-item {
+                color: #75B1D4;
+            }
+            
+            .filter {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            /* FAQs */
+            
+            .faqs-container {
+                margin: 40px auto;
+                max-width: 1300px;
+                border-radius: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .faq {
+                background-color: transparent;
+                border: 1px solid #9FA4A8;
+                border-radius: 20px;
+                padding: 30px;
+                position: relative;
+                overflow: hidden;
+                margin: 20px 0;
+                transition: 0.3s ease;
+            }
+            
+            .faq.active {
+                background-color: #fff;
+                border-radius: 20px;
+            }
+            
+            .faq.active::after,
+            .faq.active::before {
+                color: #7E7263;
+                content: '\f075';
+                font-family: 'Font Awesome 5 Free';
+                font-size: 7rem;
+                position: absolute;
+                opacity: 0.2;
+                top: 20px;
+                left: 20px;
+                z-index: 0;
+            }
+            
+            .faq.active::before {
+                color: #3498db;
+                top: -10px;
+                left: -30px;
+                transform: rotateY(180deg);
+            }
+            
+            .faq-title {
+                margin: 0 35px 0 0;
+            }
+            
+            .faq-text {
+                display: none;
+                margin: 30px 5px 5px;
+            }
+            
+            .faq.active .faq-text {
+                display: block;
+            }
+            
+            .faq-toggle {
+                background-color: transparent;
+                border: none;
+                border-radius: 50%;
+                color: #ffff;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                padding: 0;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                height: 30px;
+                width: 30px;
+            }
+            
+            .faq-toggle:focus {
+                outline: none;
+            }
+            
+            .faq.active .faq-toggle {
+                background-color: #9FA4A8;
+            }
+            
+            .faq-toggle .fa-times {
+                display: none;
+            }
+            
+            .faq.active .faq-toggle .fa-times {
+                display: block;
+            }
+            
+            .faq-toggle .fa-chevron-down {
+                color: #9FA4A8;
+            }
+            
+            .faq.active .faq-toggle .fa-chevron-down {
+                display: none;
+            }
+            /* Reasons to visit Australia section - animations icons */
+            
+            .moveFromLeft {
+                animation-name: moveFromLeft;
+                animation-duration: 3s;
+            }
+            
+            .moveFromRight {
+                animation-name: moveFromRight;
+                animation-duration: 3s;
+            }
+            
+            .moveFromBottom {
+                animation-name: moveFromBottom;
+                animation-duration: 3s;
+            }
+            
+            @keyframes moveFromLeft {
+                0% {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes moveFromRight {
+                0% {
+                    transform: translateX(100px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes moveFromBottom {
+                0% {
+                    transform: translateY(40px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            /* CONTACT SECTION */
+            
+            .container-contact {
+                max-width: 1300px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0.5em;
+                margin-bottom: 30px;
+            }
+            
+            .contact-details ul {
+                list-style: none;
+                padding: 10px;
+                font-size: 15px;
+            }
+            
+            .title-contact {
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            
+            .wrapper {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .wrapper>* {
+                padding: 1em;
+            }
+            
+            .contact-details {
+                background: #C9E6FF;
+                background-image: url('images/aus-map.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #016d9c;
+                font-weight: bold;
+            }
+            
+            .contact-details h3 {
+                text-align: left;
+                margin: 0 1ren 0;
+            }
+            
+            .contact-details ul {
+                text-align: left;
+                margin: 0 1ren 0;
+                color: #022d3f;
+            }
+            
+            .contactForm {
+                background: #F9FEFF;
+            }
+            /* CONTACT FORM */
+            
+            .contactForm {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+            
+            .contactForm label {
+                display: block;
+            }
+            
+            .contactForm p {
+                margin: 0;
+            }
+            
+            .contactForm .full {
+                grid-column: 1 / 3;
+            }
+            
+            .contactForm input,
+            .contactForm textarea {
+                width: 100%;
+                padding: 1em;
+                border: 1px solid #C9E6FF;
+            }
+            /* MEDIA SIZE- large devices CONTACT SECTION */
+            
+            @media(min-width: 700px) {
+                .wrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                }
+                .wrapper>* {
+                    padding: 3em;
+                }
+                .contact-details ul {
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+            /* ----- Taking Notes App ------- */
+            
+            #taking-notes-app,
+            .notes-app-container {
+                top: 20vh;
+                right: -75vw;
+                z-index: 9999;
+                width: 100%;
+                position: fixed;
+                transition: all 0.2s ease-in-out;
+            }
+            /* Open the taking-notes-app  */
+            
+            .open-notes-app {
+                position: relative;
+                background: #016d9c;
+                border: 1px solid #016d9c;
+                border-radius: 6px 0 0 6px;
+                box-shadow: -3px 0px 3px 1px rgba(4, 85, 95, 0.4);
+                color: #ffff;
+                cursor: pointer;
+                font-size: 1.3rem;
+                padding: .6rem;
+                width: 21%;
+                top: 15vh;
+                text-align: center;
+            }
+            
+            .open-notes-app::before {
+                position: absolute;
+                display: block;
+                content: " ";
+                box-shadow: -7px 0px 3px 0px rgba(4, 85, 95, 0.4);
+                background: #016d9c;
+                border: 1px solid #016d9c;
+                border-right-color: #016d9c;
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 50%;
+                transform: translate(-100%, -50%);
+            }
+            
+            .notes-app-container {
+                background: #97c1d9;
+                border: 1px solid #016d9c;
+                border-radius: 6px 0 0 6px;
+                box-shadow: -3px 0px 3px 1px rgba(0, 0, 0, 0.5);
+                width: 80%;
+                max-height: 80vh;
+                overflow: scroll;
+            }
+            /*  Notes app opened */
+            
+            #taking-notes-app.opened {
+                right: 0;
+            }
+            
+            #taking-notes-app.opened .notes-app-container {
+                right: 0;
+            }
+            
+            li.note-item {
+                background: #ffff;
+                color: #102420;
+                border: 1px solid #102420;
+                padding: 10px 25px 5px 10px;
+                position: relative;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+            /* Note required*/
+            
+            #note-item-required {
+                border: 1px solid;
+                padding: .4rem;
+                margin: 1rem 0;
+                color: #F92C2C;
+                border-color: #fff;
+                font-size: 15px;
+            }
+            /* MEDIA SIZES - Taking notes app */
+            
+            @media screen and (min-width: 576px) {
+                /*Notes-app  pop-out */
+                .open-notes-app {
+                    left: -20%;
+                }
+                #notes-app,
+                .notes-app-container {
+                    width: 100%;
+                    right: -57vw;
+                }
+            }
+            
+            @media screen and (min-width: 768px) {
+                /* Notes-app pop-out */
+                #taking-notes-app,
+                .notes-app-container {
+                    width: 40%;
+                    right: -38vw;
+                }
+                .open-notes-app {
+                    top: 15vh;
+                }
+            }
+            
+            @media screen and (min-width: 992px) {
+                /* Notes-app  pop-out */
+                #taking-notes-app,
+                .notes-app-container {
+                    width: 30%;
+                    right: -28vw;
+                }
+            }
+            
+            @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:wght@300;400;700;800&display=swap');
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+            }
+            
+            html {
+                scroll-behavior: smooth;
+                color: #404040;
+                font-size: 10px;
+            }
+            
+            body {
+                font-family: "Montserrat", sans-serif;
+                color: #102420;
+                background-color: #fff;
+                font-weight: 400;
+                line-height: 1.5;
+                text-align: left;
+                overflow-x: hidden;
+            }
+            
+            h1,
+            h2,
+            h3 {
+                font-family: "Concert One", cursive;
+                letter-spacing: 2px;
+                color: #016d9c;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-weight: 700;
+                text-shadow: 1px 1px 1px #7E7263;
+            }
+            
+            h4,
+            h5,
+            h6 {
+                font-family: "Concert One", cursive;
+                letter-spacing: 2px;
+                color: #016d9c;
+                text-transform: uppercase;
+                margin-top: 0;
+                font-weight: 700;
+            }
+            
+            p {
+                font-size: 1.6rem;
+            }
+            
+            .container {
+                max-width: 120rem;
+                width: 100%;
+                margin: 0 auto;
+            }
+            /*lead*/
+            
+            .lead {
+                color: #606060;
+                font-size: 1.7rem;
+                font-weight: 600;
+            }
+            
+            .about,
+            .activities,
+            .contact {
+                background-color: #97c1d9;
+            }
+            /* NAVBAR */
+            
+            a {
+                text-decoration: none !important;
+                color: rgba(240, 244, 247, 0.966) !important;
+            }
+            
+            .hero-image-home {
+                width: 100%;
+                height: 80vh;
+                background: url("images/goldcoastf.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .hero-image-activities {
+                width: 100%;
+                height: 80vh;
+                background: url("images/luckybayf.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .hero-image-contact {
+                width: 100%;
+                height: 80vh;
+                background: url("images/kalbari.jpg") center no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .menu-toggle {
+                position: absolute;
+                top: 2.5rem;
+                right: 2.5rem;
+                color: #102420;
+                font-size: 4rem;
+                cursor: pointer;
+                z-index: 1000;
+                display: none;
+            }
+            
+            nav {
+                padding-top: 3.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 3rem;
+                font-family: "Concert one", cursive;
+            }
+            
+            .brand {
+                font-size: 3rem;
+                font-family: "Concert one", cursive;
+                transform: translateX(-100rem);
+                animation: slideIn 0.5s forwards;
+            }
+            
+            .brand span {
+                color: #016d9c;
+                font-family: "Concert one", cursive;
+            }
+            
+            nav ul {
+                display: flex;
+            }
+            
+            nav ul li {
+                list-style: none;
+                transform: translateX(100rem);
+                animation: slideIn 0.5s forwards;
+            }
+            
+            nav ul li:nth-child(1) {
+                animation-delay: 0s;
+            }
+            
+            nav ul li:nth-child(2) {
+                animation-delay: 0.5s;
+            }
+            
+            nav ul li:nth-child(3) {
+                animation-delay: 1s;
+            }
+            
+            nav ul li:nth-child(4) {
+                animation-delay: 1.5s;
+            }
+            
+            nav ul li a {
+                padding: 1rem 0;
+                margin: 0 3rem;
+                position: relative;
+                letter-spacing: 3px;
+            }
+            
+            nav ul li a:last-child {
+                margin-right: 0;
+            }
+            
+            nav ul li a::before,
+            nav ul li a::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #016d9c;
+                left: 0;
+                transform: scaleX(0);
+                transition: all 0.5s;
+            }
+            
+            nav ul li a::before {
+                top: 0;
+                transform-origin: left;
+            }
+            
+            nav ul li a::after {
+                bottom: 0;
+                transform-origin: right;
+            }
+            
+            .overlay {
+                background-color: rgba(16, 36, 32, 0.85);
+                position: absolute;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                transition: opacity 650ms;
+                transform: scale(0);
+                opacity: 0;
+                display: none;
+            }
+            
+            nav ul li a:hover::before,
+            nav ul li a:hover::after {
+                transform: scaleX(1);
+            }
+            
+            @keyframes slideIn {
+                from {}
+                to {
+                    transform: translateX(0);
+                }
+            }
+            
+            @media screen and (max-width: 768px) {
+                .menu-toggle {
+                    display: block;
+                }
+                nav {
+                    padding-top: 0;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    height: 70vh;
+                    text-align: center;
+                }
+                nav ul {
+                    flex-direction: column;
+                }
+                nav ul li {
+                    margin-top: 5rem;
+                }
+                nav ul li a {
+                    margin: 0;
+                    font-size: 2rem;
+                }
+                .brand {
+                    font-size: 4rem;
+                }
+                .overlay.menu-open,
+                nav.menu-open {
+                    display: flex;
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                .hero-image-home,
+                .hero-image-activities,
+                .hero-image-contact {
+                    height: 70vh;
+                }
+            }
+            /* FOOTER  */
+            
+            .footer-img {
+                width: 100%;
+                margin-top: 35px;
+                margin-bottom: -28px;
+            }
+            
+            footer {
+                height: 2.8rem;
+                display: flex;
+                margin-bottom: -1px;
+            }
+            
+            .footer-container {
+                display: flex;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+            /* Social Media icons footer */
+            
+            .social {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin: 0;
+            }
+            
+            .social i {
+                font-size: 1rem;
+                margin: 5px;
+                padding: 5px;
+                color: #f8f8ff;
+                transition: transform 0.2s;
+            }
+            
+            .social i:hover {
+                color: #97c1d9;
+                transform: scale(1.4);
+            }
+            /* Learn about ireland */
+            /* Card Styles */
+            
+            .card {
+                border: none;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .card-img-top {
+                padding-bottom: 10px;
+            }
+            
+            .card-title {
+                margin-top: 20px;
+                font-weight: 400;
+                font-size: 20px;
+                min-height: 40px;
+            }
+            
+            .card-body p {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 13px;
+            }
+            /* Buttons */
+            
+            .btn-primary {
+                color: #fff;
+                background-color: #7E7263;
+                border-radius: 20px;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px 10px;
+                margin: 10px 10px;
+            }
+            
+            .btn-secondary {
+                color: #fff;
+                background-color: #016d9c;
+                border-radius: 25px;
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 10px 50px;
+                margin: 10px 10px;
+                width: 100%;
+            }
+            
+            .btn-secondary:hover {
+                background-color: #7E7263;
+                transform: translateY(-3px);
+            }
+            
+            .find-out-more-btn:not(:disabled):not(.disabled) {
+                cursor: pointer;
+                color: #f8f8ff;
+            }
+            /* Button Delete within notes app */
+            
+            button.btn-delete {
+                background: none;
+                border-radius: 15px;
+                color: #F92C2C;
+                font-weight: 800;
+                margin-left: 10px;
+                position: absolute;
+                right: 0;
+                top: 5px;
+            }
+            
+            button.btn-delete {
+                cursor: pointer;
+                background-color: #016d9c;
+            }
+            
+            .btn-danger {
+                color: #fff;
+                background-color: #F92C2C;
+                border-radius: 20px;
+                font-size: 12px;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 10px 10px;
+                margin: 10px 10px;
+            }
+            
+            .btn-danger:hover {
+                background-color: #016d9c;
+                transform: translateY(-3px);
+            }
+            
+            #to-top-btn {
+                width: 6rem;
+                height: 6rem;
+                background-color: #102420;
+                border-radius: 50%;
+                display: none;
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                z-index: 99;
+                color: #016d9c;
+                border: none;
+                font-size: 30px;
+                padding: 5px 5px;
+            }
+            /*  Map with activity(options) cards  */
+            /* Grid template taken from https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+            
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+                grid-gap: 2rem;
+            }
+            
+            .activity {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #97c1d9;
+                background-size: cover;
+            }
+            
+            .activity .centered {
+                position: absolute;
+                color: #fff;
+                font-size: 3.8rem;
+                font-family: "Concert One", cursive;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                text-shadow: 1px 1px 1px #000;
+            }
+            
+            .img-thumbnail {
+                min-height: 320px;
+            }
+            /* Map style */
+            /*define the size of the div element that contains the map. */
+            
+            #map {
+                height: 700px;
+                width: 100%;
+                margin-top: 2rem;
+                margin-bottom: 3rem;
+            }
+            /* Gallery section*/
+            
+            .gallery-list-item {
+                color: #777;
+                cursor: pointer;
+                user-select: none;
+            }
+            
+            .active-item {
+                color: #75B1D4;
+            }
+            
+            .filter {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            /* FAQs */
+            
+            .faqs-container {
+                margin: 40px auto;
+                max-width: 1300px;
+                border-radius: 20px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .faq {
+                background-color: transparent;
+                border: 1px solid #9FA4A8;
+                border-radius: 20px;
+                padding: 30px;
+                position: relative;
+                overflow: hidden;
+                margin: 20px 0;
+                transition: 0.3s ease;
+            }
+            
+            .faq.active {
+                background-color: #fff;
+                border-radius: 20px;
+            }
+            
+            .faq.active::after,
+            .faq.active::before {
+                color: #7E7263;
+                content: '\f075';
+                font-family: 'Font Awesome 5 Free';
+                font-size: 7rem;
+                position: absolute;
+                opacity: 0.2;
+                top: 20px;
+                left: 20px;
+                z-index: 0;
+            }
+            
+            .faq.active::before {
+                color: #3498db;
+                top: -10px;
+                left: -30px;
+                transform: rotateY(180deg);
+            }
+            
+            .faq-title {
+                margin: 0 35px 0 0;
+            }
+            
+            .faq-text {
+                display: none;
+                margin: 30px 5px 5px;
+            }
+            
+            .faq.active .faq-text {
+                display: block;
+            }
+            
+            .faq-toggle {
+                background-color: transparent;
+                border: none;
+                border-radius: 50%;
+                color: #ffff;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                padding: 0;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                height: 30px;
+                width: 30px;
+            }
+            
+            .faq-toggle:focus {
+                outline: none;
+            }
+            
+            .faq.active .faq-toggle {
+                background-color: #9FA4A8;
+            }
+            
+            .faq-toggle .fa-times {
+                display: none;
+            }
+            
+            .faq.active .faq-toggle .fa-times {
+                display: block;
+            }
+            
+            .faq-toggle .fa-chevron-down {
+                color: #9FA4A8;
+            }
+            
+            .faq.active .faq-toggle .fa-chevron-down {
+                display: none;
+            }
+            /* Reasons to visit Australia section - animations icons */
+            
+            .moveFromLeft {
+                animation-name: moveFromLeft;
+                animation-duration: 3s;
+            }
+            
+            .moveFromRight {
+                animation-name: moveFromRight;
+                animation-duration: 3s;
+            }
+            
+            .moveFromBottom {
+                animation-name: moveFromBottom;
+                animation-duration: 3s;
+            }
+            
+            @keyframes moveFromLeft {
+                0% {
+                    transform: translateX(-100px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes moveFromRight {
+                0% {
+                    transform: translateX(100px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes moveFromBottom {
+                0% {
+                    transform: translateY(40px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            /* CONTACT SECTION */
+            
+            .container-contact {
+                max-width: 1300px;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0.5em;
+            }
+            
+            .contact-details ul {
+                list-style: none;
+                padding: 10px;
+                font-size: 15px;
+            }
+            
+            .title-contact {
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            
+            .wrapper {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 18px 0 rgba(0, 0, 0, 0.19);
+            }
+            
+            .wrapper>* {
+                padding: 1em;
+            }
+            
+            .contact-details {
+                background: #C9E6FF;
+                background-image: url('images/aus-map.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #016d9c;
+                font-weight: bold;
+            }
+            
+            .contact-details h3 {
+                text-align: left;
+                margin: 0 1ren 0;
+            }
+            
+            .contact-details ul {
+                text-align: left;
+                margin: 0 1ren 0;
+                color: #022d3f;
+            }
+            
+            .contact {
+                background: #F9FEFF;
+            }
+            /* CONTACT FORM */
+            
+            .contactForm {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+            
+            .contactForm label {
+                display: block;
+            }
+            
+            .contactForm p {
+                margin: 0;
+            }
+            
+            .contactForm .full {
+                grid-column: 1 / 3;
+            }
+            
+            .contactForm input,
+            .contactForm textarea {
+                width: 100%;
+                padding: 1em;
+                border: 1px solid #C9E6FF;
+            }
+            /* MEDIA SIZE- large devices CONTACT SECTION */
+            
+            @media(min-width: 700px) {
+                .wrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                }
+                .wrapper>* {
+                    padding: 3em;
+                }
+                .contact-details ul {
+                    text-align: left;
+                    padding: 10px;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+            /* ----- Taking Notes App ------- */
+            
+            #taking-notes-app,
+            .notes-app-container {
+                top: 20vh;
+                right: -75vw;
+                z-index: 9999;
+                width: 100%;
+                position: fixed;
+                transition: all 0.2s ease-in-out;
+            }
+            /* Open the taking-notes-app  */
+            
+            .open-notes-app {
+                position: relative;
+                background: #016d9c;
+                border: 1px solid #016d9c;
+                border-radius: 6px 0 0 6px;
+                box-shadow: -3px 0px 3px 1px rgba(4, 85, 95, 0.4);
+                color: #ffff;
+                cursor: pointer;
+                font-size: 1.3rem;
+                padding: .6rem;
+                width: 21%;
+                top: 15vh;
+                text-align: center;
+            }
+            
+            .open-notes-app::before {
+                position: absolute;
+                display: block;
+                content: " ";
+                box-shadow: -7px 0px 3px 0px rgba(4, 85, 95, 0.4);
+                background: #016d9c;
+                border: 1px solid #016d9c;
+                border-right-color: #016d9c;
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 50%;
+                transform: translate(-100%, -50%);
+            }
+            
+            .notes-app-container {
+                background: #97c1d9;
+                border: 1px solid #016d9c;
+                border-radius: 6px 0 0 6px;
+                box-shadow: -3px 0px 3px 1px rgba(0, 0, 0, 0.5);
+                width: 80%;
+                max-height: 80vh;
+                overflow: scroll;
+            }
+            /*  Notes app opened */
+            
+            #taking-notes-app.opened {
+                right: 0;
+            }
+            
+            #taking-notes-app.opened .notes-app-container {
+                right: 0;
+            }
+            
+            li.note-item {
+                background: #ffff;
+                color: #102420;
+                border: 1px solid #102420;
+                padding: 10px 25px 5px 10px;
+                position: relative;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+            /* Note required*/
+            
+            #note-item-required {
+                border: 1px solid;
+                padding: .4rem;
+                margin: 1rem 0;
+                color: #F92C2C;
+                border-color: #fff;
+                font-size: 15px;
+            }
+            /* MEDIA SIZES - Taking notes app */
+            
+            @media screen and (min-width: 576px) {
+                /*Notes-app  pop-out */
+                .open-notes-app {
+                    left: -20%;
+                }
+                #notes-app,
+                .notes-app-container {
+                    width: 100%;
+                    right: -57vw;
+                }
+            }
+            
+            @media screen and (min-width: 768px) {
+                /* Notes-app pop-out */
+                #taking-notes-app,
+                .notes-app-container {
+                    width: 40%;
+                    right: -38vw;
+                }
+                .open-notes-app {
+                    top: 15vh;
+                }
+            }
+            
+            @media screen and (min-width: 992px) {
+                /* Notes-app  pop-out */
+                #taking-notes-app,
+                .notes-app-container {
+                    width: 30%;
+                    right: -28vw;
+                }
+            }
+            /* Media queries  - Footer */
+            
+            @media only screen and (min-width: 768px) {
+                footer {
+                    height: 3.2rem;
+                }
+                .footer-img {
+                    margin-bottom: -35px;
+                }
+                .social li {
+                    margin: 0px 10px;
+                    margin-bottom: 3px;
+                }
+                .social i {
+                    font-size: 1.6rem;
+                }
+            }
+            
+            @media only screen and (min-width: 1024px) {
+                form {
+                    padding: 20px 40px;
+                }
+                .social i {
+                    font-size: 1.9rem;
+                }
+                .footer-container {
+                    padding-bottom: 1.3rem;
+                }
+                .footer-img {
+                    margin-top: -10px;
+                }
+                .container-contact {
+                    max-height: 70vh;
+                }
+            }
+            
+            @media only screen and (min-width: 1200px) {
+                .footer-img {
+                    margin-top: -35px;
+                    margin-bottom: -50px;
+                }
+                .social li {
+                    margin: 0 20px;
+                }
+                /* Headings */
+                @media screen and (max-width: 768px) {
+                    /* Medium devices */
+                    h2 {
+                        font-size: 1.7rem;
+                    }
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+                    h4 {
+                        font-size: 1.4rem;
+                    }
+                    /* Large devices */
+                    @media screen and (min-width: 1200px) {
+                        h2 {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+                /*  lead */
+                @media (max-width: 576px) {
+                    .lead {
+                        font-size: 1.3rem;
+                    }
+                    .img-thumbnail {
+                        min-height: 260px;
+                    }
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
