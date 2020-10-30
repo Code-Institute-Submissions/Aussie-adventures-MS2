@@ -63,7 +63,7 @@ sr.reveal('.animate-bottom', {
     origin: 'bottom',
     duration: 1000,
     distance: '64px',
-    delay: '600'
+    delay: '400'
 });
 
 sr.reveal('.animate-top', {
