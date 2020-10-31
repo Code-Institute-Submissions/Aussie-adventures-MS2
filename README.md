@@ -3,8 +3,10 @@
 # Aussie Adventures
 
 
-Aussie Adventures is an application that uses Google Maps API to allow users to search??? for their next holiday destination. The users can find things to do by clicking at the categories. The application also allows the users to get detailed information (name, address, contact number, rating and a link to external websites) of the chosen establishment by clicking at the marker. 
-As well as that, the website gives the users information about Australia by clicking ....
+Aussie Adventures is an application that uses Google Maps API to allow users to search for different types of activities and places (Parks, Diving, Surfing, Restaurants, Camping, Beaches) for their next holiday in Australia. The users can find things to do by clicking on the categories of activities or places. The application also allows the users to get detailed information (name, address, contact number, rating, website name and price level) of the chosen activity by clicking at the marker. 
+The application contains a pull-out taking-notes app  for the user to save the details of places to visit or activities to do.
+
+Also, the website gives the users overall information about Australia and provides a gallery of australian beauties.
 [Click here to view the project live]()
 
 # Table of contents:
@@ -14,12 +16,14 @@ As well as that, the website gives the users information about Australia by clic
 ### User Stories
 
 ##### New users:
-* As a traveller, I want to find activities in Australia for my next holiday 
-* As a traveller, I want to see what attractions are in the city where I think to spend my holidays, so I can decide what to do before I get there, for example, visit museums, parks..
-* I want to visually compare locations of several hotels that I picked, checking with the map.
-* As a traveller, I want to check out different restaurants that are nearby in the city where I travel, so I can choose one to visit soon.
-* As a busy person, who spends almost all the time working, I have no time for planning my holidays, so I want to contact the Aussie Adventures team directly to discuss and organise my next holiday according to my personal preferences
-
+* As a traveller, I want to find information about different types of activities and places and show them locations on a map for my next holiday in Australia.
+* 
+* As a traveller, I want to find general information about travelling in Australia, so I can prepare 
+*  As a traveller, I want to know the best local spots from residents, so I can choose the best places to visit.
+* As a traveller, I want to check out different places/activities that are nearby in the city where I travel, so I can choose one to go .
+* As a busy person, who spends almost all the time working, I have no time for planning my holidays, so I want to contact the Aussie Adventures team directly to get neccesary information for my next holiday according to my personal preferences.
+* As a busy person who I have no time to read about safe places to go, so I want to contact the Aussie Adventures team directly to get neccesary information to make my holiday in Australia safe.
+* 
 
 
 ##### Business Owner:
@@ -48,18 +52,27 @@ As a starting point I used the image chosen for my landing page which helped to 
 Below is a picture of the color palette I got off the website Coolors [https://coolors.co/]
 
 ![color-scheme](design/color-scheme.png)
+![collage](design/collage.png)
+I used different shades for some containers. I also used different opacities of the same colour to create a layering effect and give the design hierarchy.
+
 
  
 
 **Typography**
 * I used Google Fonts to select the fonts for my project. 
-* Concerto One, cursive is used throughout the whole website for headings to give a modern look to the website.
+* Concerto One, cursive is used throughout the whole website for headings to give a modern look to the website and Montserrat.
 
  **Imagery**
 * 
 
 
 ## Features
+
+Build an application that displays a Google map
+Centered the map on the user's location
+Find nearby places and display the results as clickable markers
+Fetch and show more details about each place
+Loading the library
 
 ### Existing features 
 +  The project consists of 3 different pages "Home", "Activities",and "Contact" which can be accessed clicking on the nav links. All features are responsive on all device sizes.
@@ -69,11 +82,19 @@ Below is a picture of the color palette I got off the website Coolors [https://c
 + Each section details relevant information required to convince users to choose Australia for next holiday. The full navigation menu shrinks down to a small menu with a hamburger dropdown menu when on smaller devices- phones and ipad.
 + In the "Home" page the user receives some details about Aussie Adventures team, general info about Australia.
 + The "Activities" link will take the user to a google map above of it he can make interactive selections.The users can find camping, beaches, restaurants, museums, surfing, parks and diving by clicking at the categories.
-+ The application also allows the users to get detailed information (name, address, contact number, rating and a link to external websites) of the chosen establishment by clicking at the marker.
++ The application also allows the users to get detailed information (name, address, contact number, rating website name and price level) of the chosen establishment by clicking at the marker.The price level of the place (if it's defined) ,is on a scale of 0 to 4. Price levels are interpreted as follows:
+* 0: Free
+* 1: Inexpensive
+* 2: Moderate
+* 3: Expensive
+* 4: Very Expensive
+  
 + As well as that, the website gives the users information about Australia by clicking ....
 + The menu at the top of the page and footer are consistent in design and responsiveness.
-+ The "Contact" link leads to a FAQ section that gives the users neccesarry information of travelling in Australia by clicking on each question and above a contact form. 
-+ Every page contains a footer with the social icons.
++ The "Contact" link leads to a FAQ section that gives the users general information of travelling in Australia by clicking on each question and.... above a contact form. 
++ Every page contains a footer image of Sydney city outline skyline with the social icons.
+
+The map will also show the Users current location once they allow it.
 
 
 
@@ -107,6 +128,7 @@ Below is a picture of the color palette I got off the website Coolors [https://c
 * [Git](https://git-scm.com/) for version control
 * [Visual studio code](https://code.visualstudio.com/)- used as my IDE to develop the project
 * [JQuery](https://jquery.com/)- to simplify DOM manipulation
+* https://scrollrevealjs.org/guide/installation.html
 * Chrome DevTools used for responsiveness on different media sizes
 * [GoogleFonts](https://fonts.google.com/)  - to import the font-family used in the website
 * [FontAwesome](https://fontawesome.com/)- all Icons were taken from the Font Awesome database.
@@ -137,11 +159,18 @@ The responsiveness of this website was tested constantly during the development 
 
 ## Credits
 - [Code Institute](https://codeinstitute.net/)
-- Google Maps Platform Documentation
-- Google Places API documentation
+- Google Maps Platform Documentation and  Google Places API documentation:
+ + https://developers.google.com/places/web-service/place-data-fields
+ + https://developers.google.com/maps/documentation/javascript/infowindows
+ + https://developers.google.com/places/web-service/place-data-fields
+ + https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple-max#maps_infowindow_simple_max-javascript
+https://github.com/googlecodelabs/google-maps-nearby-search-js/
+-
 - https://www.w3schools.com https://www.w3schools.com/html/html5_semantic_elements.asp
 - https://getbootstrap.com/docs/4.3/layout/grid/
 - https://stackoverflow.com/
+- 
+- 
 
 ### Content
 
