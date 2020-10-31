@@ -7,9 +7,11 @@ This project is an interactive front end website, built from my learnings of all
 Aussie Adventures is an application that uses Google Maps API to allow users to search for different types of activities and places (Parks, Diving, Surfing, Restaurants, Camping or Beaches) for their next holiday in Australia. The users can find things to do by clicking on the categories of activities or places. The application also allows the users to get detailed information (name, address, contact number, rating, website name and price level) of the chosen activity by clicking at the marker. 
 The application has a pull-out taking-notes app for the user to save the places or things to do chosen from the map. 
 Also, the website gives the users overall information about Australia and provides a gallery of images from Australia.
+
 [Click here to view the project live](https://luizagit.github.io/Aussie-adventures-MS2)
 
 # Table of contents:
+
 
 - [Milestone 2 -Interactive Front-End](#milestone-2--interactive-front-end)
 - [Aussie Adventures](#aussie-adventures)
