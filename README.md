@@ -5,12 +5,37 @@
 ![# Milestone 2 - Aussie Adventures](design/mockup-Aussie-Adventures.JPG)
 This project is an interactive front end website, built from my learnings of all the Code Institute Full Stack Developer Course modules learnt so far, including HTML, CSS and JavaScript.
 Aussie Adventures is an application that uses Google Maps API to allow users to search for different types of activities and places (Parks, Diving, Surfing, Restaurants, Camping or Beaches) for their next holiday in Australia. The users can find things to do by clicking on the categories of activities or places. The application also allows the users to get detailed information (name, address, contact number, rating, website name and price level) of the chosen activity by clicking at the marker. 
-The application contains a pull-out taking-notes app for the user to save the places or things to do chosen from the map. 
+The application has a pull-out taking-notes app for the user to save the places or things to do chosen from the map. 
 Also, the website gives the users overall information about Australia and provides a gallery of images from Australia.
 [Click here to view the project live](https://luizagit.github.io/Aussie-adventures-MS2)
 
 # Table of contents:
 
+- [Milestone 2 -Interactive Front-End](#milestone-2--interactive-front-end)
+- [Aussie Adventures](#aussie-adventures)
+- [Table of contents:](#table-of-contents)
+    - [User Stories](#user-stories)
+        - [New users:](#new-users)
+    - [Strategy](#strategy)
+      - [Scope plane:](#scope-plane)
+      - [Structure plane](#structure-plane)
+      - [Skeleton](#skeleton)
+      - [Surface](#surface)
+  - [Features](#features)
+    - [Existing features](#existing-features)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Technologies Used](#technologies-used)
+    - [Additional tools used](#additional-tools-used)
+  - [Testing](#testing)
+    - [General Testing](#general-testing)
+    - [Validators](#validators)
+      - [Testing on Different Browsers](#testing-on-different-browsers)
+      - [Testing on Different Devices](#testing-on-different-devices)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Disclaimer](#disclaimer)
+    - [Acknowledgements](#acknowledgements)
 
 ### User Stories
 This section provides insight into the UX process, focusing on who this website is for, what it is that they want to achieve and how this project is the best way to help them achieve these things.
@@ -18,7 +43,7 @@ This section provides insight into the UX process, focusing on who this website 
 ##### New users:
 
 * As a traveller, I want to find information about different types of activities and places and show them locations on a map for my next holiday in Australia.
-* As a traveller,I want to have more targeted activity options to choose.
+* As a traveller,I want to have more targeted activity options to choose from.
 * As a traveller, I want to find general information about travelling in Australia, so I can prepare everything before travel.
 *  As a traveller, who is either a visitor in Australia or thinking of visiting Australia I want to know the best local spots from residents, so I can choose the best places to visit.
 * As a traveller, I want to check out different places/activities that are nearby in the city where I travel, so I can choose one to go .
@@ -34,15 +59,32 @@ Also, to give travellers a useful set of information and gives some recommended 
 #### Scope plane:
 * The website is made for helping travellers to plan their holidays using the map.
 * The map was centered the map on the user's location to find the nearby places.
-* Create a list of chosen places to see or do or a list of details for each chosen place.
+* he website is made for helping travellers to create a list of chosen places to see or do or a list of details of each chosen place.
 
 #### Structure plane
+* The project consists of 3 different pages "Home", "Activities",and "Contact" which can be accessed clicking on the nav links. All features are responsive on all device sizes.
 
+1.Home page:
++ info about Aussie Adventures team
++ reasons to travel in Australia
++ general info about Australia
++ gallery of australian places
+  
+1.Activities page:
++ cards with activities and places options
++ an interactive google map
++ a pull-out taking-notes app to save the details of places to visit or activities to do which can be placed into a list .
+
+4.Contact page:
++ Faq section
++ contact details - the contact details 
++ contact - form with submit form allows users to contact the team, by having them fill out the contact form (the modal opens and gives a feedback to users and the message sends via SendEmail Js
++
 
 #### Skeleton
 
  Balsamiq Wireframes was used to create all wireframes for the project.
- wireframes with some comments for desktop, tablet and mobile devices can be found below:
+ wireframes with some comments for desktop, tablet, and mobile devices can be found below:
 
  - Desktop version [Here](design/aussie-adventures-wireframes-desktop.png)
  - Tablet version [Here](design/aussie-adventures-wireframes-tablet.png)
@@ -70,48 +112,37 @@ I used different shades for some containers. I also used different opacities of 
  **Imagery**
 
 
-I used impressive and interesting use of imagery in the hero image for each page.Imagery used for intuitive explanation of information and showing inviting scenery.
+I used impressive and interesting use of imagery in the hero images for each page.Imagery used for intuitive explanation of information and showing inviting scenery.
 
 ## Features
 
 ### Existing features 
 +  The project consists of 3 different pages "Home", "Activities",and "Contact" which can be accessed clicking on the nav links. All features are responsive on all device sizes.
-+  The navigation links is on top of the page and fixed. The menu items are easy to understand. 
++  The navigation links are on top of the page. The menu items are easy to understand. 
 + The brand name "Aussie Adventures" appears on every page. Acts as a navigation link back to the user's home page.
-+ Each page features a responsive navigation with conventional placing of brand name on top left for large screens and top center for phones and ipad.
++ Each page features responsive navigation with the conventional placing of the brand name on the top left for large screens and top center for phones and ipad.
 + Each section details relevant information required to convince users to choose Australia for next holiday. The full navigation menu shrinks down to a small menu with a hamburger menu on smaller devices - phones and ipad. The navigation links and brand name slide on the screen when the user clicks on hamburger menu and hamburger closes in X.
-+ In the "Home" page the user receives some details about Aussie Adventures team, general info about Australia and some reasons to visit this country.
++ In the "Home" page the user receives some details about thhe Aussie Adventures team, general info about Australia and some reasons to visit this country.
 + The "Activities" link will take the user to a google map above of it he can make interactive selections.The users can find camping, beaches, restaurants, museums, surfing, parks and diving by clicking at the categories.
 + The application also allows the users to get detailed information (name, address, contact number, rating website name and price level) of the chosen establishment by clicking at the marker.The price level of the place (if it's defined) ,is on a scale of 0 to 4. Price levels are interpreted as follows:
+  
  * 0: Free
  * 1: Inexpensive
  * 2: Moderate
  * 3: Expensive
  * 4: Very Expensive
   
-+  The website gives the users general information  about Australia by clicking the "find out more button on cards"....
++ The website gives the users general information  about Australia by clicking the "find out more" buttons on cards from Learn about Australia section.
 + The menu at the top of the page and footer are consistent in design and responsiveness.
-+ The "Contact" link leads to a FAQ section that gives the users general information of travelling in Australia by clicking on each question and.... above a contact form. 
++ The "Contact page" link leads to a FAQ section that gives the users general information of travelling in Australia by clicking on each question.
 + Every page contains a footer image of Sydney city outline skyline with the social icons.Fixed footer allows the user quick accessibility to social media links
-
-The map will also show the Users current location once they allow it.
-
-1.Home page:
-+ info about Aussie Adventures team
-+ reasons to travel in Asutralia
-+ general info about Australia
-+ gallery of australian places
-  
-1.Activities page:
-+ cards with activities and places options
-+a  interactive google map
-+ a pull-out taking-notes app to save the details of places to visit or activities to do which can be placed into a list .
-
-4.Contact page:
-+ Faq section
-+ contact details - the contact details 
-+ contact - form with submit form allows users contact the team, by having them fill out the contact form (the modal opens and gives a feedback to users and the message sends via SendEmail Js
++ The map will also show the Users current location once they allow it.
++ The website contains a pull-out taking-notes app for the user to save the places or things to do chosen from the map. 
++ Scroll to top button on each page
++ Gallery with a filter on categories of images.
 + The contact form includes four input fields name, email address, message input field. Using the emailJS SDK the user can send the message by clicking the “send message” button at the bottom of the form.
++ Animations icons with Css
++ Animated elements with Scroll reveal
 
 
 
@@ -138,6 +169,7 @@ The map will also show the Users current location once they allow it.
 ### Additional tools used
 * [W3C Markup Validation Service](https://jigsaw.w3.org/css-validator/) - used to run all CSS code through and see if there are any errors in it
 * [HTML Validator](https://validator.w3.org/)- used to run all HTML code through and see if there are any errors in it
+* [Js Hint](https://jshint.com/) used to run all Js code through and see if there are any errors in it
 * [Code Beautify CSS beautifier](https://www.freeformatter.com/css-beautifier.html) - used to make my CSS look nicer and tidier
 * [Code Beautify HTML](https://webformatter.com/) - used to make my HTML tidier
 * [Autoprefixer](https://autoprefixer.github) - used to add vendor prefixes to my CSS
@@ -155,11 +187,11 @@ The map will also show the Users current location once they allow it.
 * Tested all internal links within the pages
 * Tested the logo linked back to the home page on all pages
 * Tested all buttons work
-* Tested the filter works on gallery section
+* Tested the filter works on the gallery section
 * Tested Google Map to open markers
-* Tested the markers on map opened by click and provide a infowindow with the following details: name, address, contact number, rating, website name and price level.
+* Tested the markers on map opened by click and opened a infowindow with the following details: name, address, contact number, rating, website name and price level.
 * Tested to open the taking-notes app tab .
-* Tested to fill the input field and press 'Enter' or press the 'Add note' button in  taking-notes app.  Also, tested with no content in the input field, and it should warn with a message. Tested to add a number of notes, delete using the X or click 'Delete Notes' to delete  the whole list. 
+* Tested to fill the input field and press 'Enter' or press the 'Add note' button in the taking-notes app.  Also, tested with no content in the input field, and it should warn with a message. Tested to add a number of notes, delete using the X or click 'Delete Notes' to delete  the whole list. 
 * Tested to submit the contact form and verify that a modal form appears and the message received via e-mailJS.
 * Tested the Website ran correctly when user clicked on the scroll to top button
 
