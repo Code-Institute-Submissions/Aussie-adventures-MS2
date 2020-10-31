@@ -1,7 +1,7 @@
 // Google maps functionality
 
 //Global Variables
-var map, infoWindow, service, keyWord, bounds;
+var map, infoWindow, service, bounds;
 var userPosition;
 var markers = [];
 var currentInfoWindow;
@@ -193,7 +193,7 @@ function showDetails(placeResult, marker, status) {
         currentInfoWindow.close();
         currentInfoWindow = placeInfowindow;
 
-        showCard(placeResult);
+        showDetails(placeResult);
     } else {
         console.log("showDetails failed: " + status);
     }
